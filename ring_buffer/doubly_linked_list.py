@@ -8,6 +8,9 @@ class ListNode:
         self.prev = prev
         self.next = next
 
+    def __str__(self):
+        return str(self.value)
+
     """Wrap the given value in a ListNode and insert it
     after this node. Note that this node could already
     have a next node it is point to."""
@@ -47,6 +50,13 @@ class DoublyLinkedList:
 
     def __len__(self):
         return self.length
+
+    def print(self):
+        curr_node = self.head
+        print(curr_node)
+        while curr_node.next is not None:
+            curr_node = curr_node.next
+            print(curr_node)
 
     """Wraps the given value in a ListNode and inserts it 
     as the new head of the list. Don't forget to handle 
